@@ -1,0 +1,15 @@
+.large-logo{
+    max-width: 400px;
+    width: 40%;
+}
+.darkblue{
+    background: #262853;
+}
+
+.btn-xl {
+    padding: 15px 10px;
+    font-size:1.5vw;
+
+    border-radius: 10px;
+    width:15%;
+}
