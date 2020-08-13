@@ -19,7 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf75665c-9e60-4fbc-93f0-36e38b44ad8a" name="Default Changelist" comment="" />
+    <list default="true" id="cf75665c-9e60-4fbc-93f0-36e38b44ad8a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/style.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,6 +58,12 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.HTML" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/styles" />
+      <recent name="$PROJECT_DIR$/scripts" />
+    </key>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -63,7 +74,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1597114488638</updated>
-      <workItem from="1597114494452" duration="15528000" />
+      <workItem from="1597114494452" duration="20282000" />
+      <workItem from="1597216866575" duration="16685000" />
     </task>
     <servers />
   </component>
@@ -80,8 +92,13 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="529" y="207" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1597275502938">
+      <screen x="0" y="23" width="1440" height="823" />
+    </state>
+    <state x="529" y="207" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.823@0.23.1440.823" timestamp="1597275502938" />
     <state x="14" y="178" key="SettingsEditor" timestamp="1597142965627">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -91,9 +108,10 @@
       <screen x="0" y="23" width="1920" height="1002" />
     </state>
     <state x="830" y="161" width="586" height="735" key="find.popup/-1440.238.1440.877/0.23.1920.1002@0.23.1920.1002" timestamp="1597116060700" />
-    <state x="788" y="304" width="670" height="676" key="search.everywhere.popup" timestamp="1597115767015">
-      <screen x="0" y="23" width="1920" height="1002" />
+    <state x="591" y="252" width="670" height="608" key="search.everywhere.popup" timestamp="1597193261006">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="788" y="304" width="670" height="676" key="search.everywhere.popup/-1440.238.1440.877/0.23.1920.1002@0.23.1920.1002" timestamp="1597115767015" />
+    <state x="591" y="252" width="670" height="608" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1597193261006" />
   </component>
 </project>
