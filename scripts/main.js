@@ -3,6 +3,13 @@ submitButton.onclick = () => window.open('https://forms.gle/5y9HjxX23axi9nrU8', 
 
 console.log("hi");
 
+
+testTxt = document.createElement("h1");
+testTxt.innerText = "test";
+document.getElementById("recent_gallery").appendChild(testTxt);
+
+
+
 //JSON link: https://spreadsheets.google.com/feeds/cells/1fDiPcoEeUrMZASy5Gtp_uDZ9hDa7J9GVyzHRskv_tm4/1/public/full?alt=json
 const url = "https://spreadsheets.google.com/feeds/cells/1fDiPcoEeUrMZASy5Gtp_uDZ9hDa7J9GVyzHRskv_tm4/1/public/full?alt=json"
 fetch(url).then(res => res.json())
