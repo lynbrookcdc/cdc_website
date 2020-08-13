@@ -1,6 +1,8 @@
 const submitButton = document.getElementById("submit_button");
 submitButton.onclick = () => window.open('https://forms.gle/5y9HjxX23axi9nrU8', '_blank');
 
+console.log("hi");
+
 //JSON link: https://spreadsheets.google.com/feeds/cells/1fDiPcoEeUrMZASy5Gtp_uDZ9hDa7J9GVyzHRskv_tm4/1/public/full?alt=json
 const url = "https://spreadsheets.google.com/feeds/cells/1fDiPcoEeUrMZASy5Gtp_uDZ9hDa7J9GVyzHRskv_tm4/1/public/full?alt=json"
 fetch(url).then(res => res.json())
