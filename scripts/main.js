@@ -4,11 +4,6 @@ submitButton.onclick = () => window.open('https://forms.gle/5y9HjxX23axi9nrU8', 
 console.log("hi");
 
 
-testTxt = document.createElement("h1");
-testTxt.innerText = "test";
-document.getElementById("recent_gallery").appendChild(testTxt);
-
-
 
 //JSON link: https://spreadsheets.google.com/feeds/cells/1fDiPcoEeUrMZASy5Gtp_uDZ9hDa7J9GVyzHRskv_tm4/1/public/full?alt=json
 const url = "https://spreadsheets.google.com/feeds/cells/1fDiPcoEeUrMZASy5Gtp_uDZ9hDa7J9GVyzHRskv_tm4/1/public/full?alt=json"
@@ -24,15 +19,22 @@ function loadImages(data) {
 
     let submissions = organiseData(data);
 
-    submissions.forEach(submission => {
-            let img = document.createElement('img');
-            img.src = submission.image;
-            recentGallery.appendChild(img);
-        }
-    );
-
-
-
+    // submissions.forEach(submission => {
+    //         let img = document.createElement('img');
+    //         img.src = submission.image;
+    //         img.classList.add("container-fluid")
+    //         img.classList.add("image")
+    //         recentGallery.appendChild(img);
+    //     }
+    // );
+    for (let i = 0; i < 6 || i > submissions.length - 1;i++){
+        let submission = submissions[i]
+        let img = document.createElement('img');
+        img.src = submission.image;
+        img.classList.add("container-fluid")
+        img.classList.add("image")
+        recentGallery.appendChild(img);
+    }
 }
 
 
