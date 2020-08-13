@@ -27,7 +27,7 @@ function loadImages(data) {
     //         recentGallery.appendChild(img);
     //     }
     // );
-    for (let i = 0; i < 6 || i > submissions.length - 1;i++){
+    for (let i = submissions.length - 1; i > submissions.length - 6 || i > 0;i--){
         let submission = submissions[i]
         let img = document.createElement('img');
         img.src = submission.image;
