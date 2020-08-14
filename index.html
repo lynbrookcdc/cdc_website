@@ -48,12 +48,41 @@ Note for formatting: Padding is used for divs and margins are used for everythin
     </button>
 
 
-    <div class="text-center col">
-        <div  class="gallery" id="recent_gallery" style=" height: 20vh; max-width:100%;  background: aqua">
-            <!-- images are dynamically added here -->
-        </div>
-    </div>
+    <div id="galleries">
 
+        <!-- recent gallery -->
+        <div>
+            <div class="row">
+                <a href="gallery.html">
+                <h5 class="galleryTitle ml-5">Recent</h5>
+                </a>
+            </div>
+
+            <div class="text-center col">
+                <div class="gallery" id="recent_gallery" style=" height: 20vh; max-width:100%;">
+                    <!-- images are dynamically added here -->
+                </div>
+            </div>
+        </div>
+
+
+        <template id="gallery_template">
+            <div class="py-4">
+                <div class="row">
+                    <a href="gallery.html">
+                        <h5 class="galleryTitle ml-5">Name</h5>
+                    </a>
+                </div>
+                <div class="text-center col">
+                    <div class="gallery" style=" height: 20vh; max-width:100%;">
+                        <!-- images are dynamically added here -->
+                    </div>
+                </div>
+            </div>
+        </template>
+
+
+    </div>
 </div>
 
 
