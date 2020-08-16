@@ -1,16 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--
-Citations:
-    Title - Grid Gallery
-    Author - jestov, alnidok
-    Date - Dec 8, 2019
-    Version - N/A
-    Availability - https://jestov.com/grid-gallery/
-
-
-    -->
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -22,7 +11,7 @@ Citations:
 </head>
 
 <!--
-Note for formatting: Padding is used for divs and margins are used for everything inside of divs (unless some formatting error occurs)
+Note for formatting: Padding is used for divs and margins are used for everything inside of divs (unless it doesnt fit what you want)
 -->
 
 
@@ -53,13 +42,13 @@ Note for formatting: Padding is used for divs and margins are used for everythin
         <!-- recent gallery -->
         <div>
             <div class="row">
-                <a href="gallery.html">
-                <h5 class="galleryTitle ml-5">Recent</h5>
+                <a href="gallery.html?Recent">
+                    <h5 class="galleryTitle ml-5">Recent</h5>
                 </a>
             </div>
 
-            <div class="text-center col">
-                <div class="gallery" id="recent_gallery" style=" height: 20vh; max-width:100%;">
+            <div class="col">
+                <div class="previewGallery" id="recent_gallery" style=" height: 20vh; max-width:100%;">
                     <!-- images are dynamically added here -->
                 </div>
             </div>
@@ -73,8 +62,8 @@ Note for formatting: Padding is used for divs and margins are used for everythin
                         <h5 class="galleryTitle ml-5">Name</h5>
                     </a>
                 </div>
-                <div class="text-center col">
-                    <div class="gallery" style=" height: 20vh; max-width:100%;">
+                <div class="col">
+                    <div class="previewGallery" style=" height: 20vh; max-width:100%;">
                         <!-- images are dynamically added here -->
                     </div>
                 </div>
@@ -86,10 +75,10 @@ Note for formatting: Padding is used for divs and margins are used for everythin
 </div>
 
 
-
-
+<script src="scripts/request.js" type="text/javascript"></script>
 
 <script src="scripts/main.js" type="text/javascript"></script>
+
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
@@ -99,6 +88,7 @@ Note for formatting: Padding is used for divs and margins are used for everythin
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
+
 
 </body>
 </html>

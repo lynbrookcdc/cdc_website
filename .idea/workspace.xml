@@ -20,8 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cf75665c-9e60-4fbc-93f0-36e38b44ad8a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/scripts/gallery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/image.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/request.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/gallery.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image.html" beforeDir="false" afterPath="$PROJECT_DIR$/image.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,9 +38,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -74,7 +81,7 @@
       <updated>1597114488638</updated>
       <workItem from="1597114494452" duration="20282000" />
       <workItem from="1597216866575" duration="42066000" />
-      <workItem from="1597388279293" duration="5022000" />
+      <workItem from="1597388279293" duration="34014000" />
     </task>
     <servers />
   </component>
@@ -113,5 +120,17 @@
     <state x="788" y="304" width="670" height="676" key="search.everywhere.popup/-1440.238.1440.877/0.23.1920.1002@0.23.1920.1002" timestamp="1597115767015" />
     <state x="788" y="305" width="894" height="680" key="search.everywhere.popup/-1440.238.1440.877/0.23.1920.1006@0.23.1920.1006" timestamp="1597358003137" />
     <state x="591" y="252" width="670" height="608" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1597193261006" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/scripts/request.js</url>
+          <line>8</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
