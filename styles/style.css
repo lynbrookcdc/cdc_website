@@ -34,4 +34,19 @@ a {
     float: left;
     height: 100%;
     width: auto;
+    -webkit-filter: brightness(100%);
+}
+
+/*
+https://stackoverflow.com/questions/17481660/darken-background-image-on-hover
+ */
+
+
+.thumbnail:hover {
+    -webkit-filter: brightness(85%);
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    transition: all .2s ease;
 }
