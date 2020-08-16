@@ -21,7 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cf75665c-9e60-4fbc-93f0-36e38b44ad8a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/gallery.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/gallery.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +74,8 @@
       <updated>1597114488638</updated>
       <workItem from="1597114494452" duration="20282000" />
       <workItem from="1597216866575" duration="42066000" />
-      <workItem from="1597388279293" duration="34626000" />
+      <workItem from="1597388279293" duration="35118000" />
+      <workItem from="1597561039165" duration="1702000" />
     </task>
     <servers />
   </component>
@@ -120,7 +121,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/scripts/request.js</url>
           <line>8</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
