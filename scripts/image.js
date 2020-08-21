@@ -30,5 +30,5 @@ function fillInfo(submission) {
     title.textContent = submission.title;
     name.textContent =  "By: " + submission.displayName;
     category.textContent = "Category: " + submission.category;
-    description.textContent = submission.description;
+    description.innerHTML = submission.description.replace(new RegExp('\r?\n','g'), '<br />');
 }

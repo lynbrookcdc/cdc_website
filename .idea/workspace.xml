@@ -21,7 +21,12 @@
   <component name="ChangeListManager">
     <list default="true" id="cf75665c-9e60-4fbc-93f0-36e38b44ad8a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/gallery.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image.html" beforeDir="false" afterPath="$PROJECT_DIR$/image.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/image.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/image.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/request.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +81,11 @@
       <workItem from="1597114494452" duration="20282000" />
       <workItem from="1597216866575" duration="42066000" />
       <workItem from="1597388279293" duration="35118000" />
-      <workItem from="1597561039165" duration="4254000" />
+      <workItem from="1597561039165" duration="5204000" />
+      <workItem from="1597685229623" duration="646000" />
+      <workItem from="1597964373853" duration="324000" />
+      <workItem from="1597967550430" duration="394000" />
+      <workItem from="1597997835006" duration="9419000" />
     </task>
     <servers />
   </component>
@@ -96,6 +105,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598019852303">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1598019852303" />
     <state x="529" y="207" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1597275502938">
       <screen x="0" y="23" width="1440" height="823" />
     </state>
@@ -121,7 +134,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/scripts/request.js</url>
-          <line>8</line>
+          <line>9</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>

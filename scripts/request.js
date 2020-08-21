@@ -1,5 +1,6 @@
 var submissionArr = [];  //TODO change submissionsArr to a map (maybe)
 var categoriesMap = new Map();
+var announcmentsText = "nothing to see here"
 
 
 
@@ -51,11 +52,7 @@ function organiseData(data) {
                 submissionArr[rCount].displayName = cell.gs$cell.$t;
                 break;
             case 4:
-                if (cell.gs$cell.$t == null) {
-                    submissionArr[rCount].description = "a piece of art";
-                } else {
-                    submissionArr[rCount].description = cell.gs$cell.$t;
-                }
+                submissionArr[rCount].description = cell.gs$cell.$t;
                 break;
             case 5:
                 if (!categoriesMap.has(cell.gs$cell.$t)) {
@@ -72,6 +69,11 @@ function organiseData(data) {
                 break;
             case 9:
                 submissionArr[rCount].id = cell.gs$cell.$t;
+                break;
+            case 11:
+                if (Number(cell.gs$cell.row) === 2){
+                    announcmentsText = cell.gs$cell.$t;
+                }
                 break;
         }
     }
@@ -94,7 +96,7 @@ class submission{
         this.timestamp;
         this.title;
         this.displayName;
-        this.description;
+        this.description = "";
         this.category;
         this.image;
         this.id;

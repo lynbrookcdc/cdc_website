@@ -1,28 +1,28 @@
 console.log(performance.now())
 const submitButton = document.getElementById("submit_button");
 submitButton.onclick = () => window.open('https://forms.gle/5y9HjxX23axi9nrU8', '_blank');
-getData().then(() => loadImages(submissionArr, categoriesMap));
+getData().then(() => populateMain(submissionArr, categoriesMap));
 
 
-function loadImages(submissions, categories) {
+function populateMain(submissions, categories) {
 
     console.log(submissions);
 
     const recentGallery = document.getElementById("recent_gallery");
 
 
-    for (let i = submissions.length - 1; i > submissions.length - 8 && i >= 0; i--) {
-        let submission = submissions[i]
-        let img = document.createElement('img');
-        img.src = submission.image;
-        img.classList.add("container-fluid");
-        img.classList.add("thumbnail");
-
-        let link = document.createElement('a');
-        link.href = "image.html?" + submission.id;
-        link.appendChild(img);
-        recentGallery.appendChild(link);
-    }
+    // for (let i = submissions.length - 1; i > submissions.length - 10 && i >= 0; i--) {
+    //     let submission = submissions[i]
+    //     let img = document.createElement('img');
+    //     img.src = submission.image;
+    //     img.classList.add("container-fluid");
+    //     img.classList.add("thumbnail");
+    //
+    //     let link = document.createElement('a');
+    //     link.href = "image.html?" + submission.id;
+    //     link.appendChild(img);
+    //     recentGallery.appendChild(link);
+    // }
 
 
     const template = document.getElementById("gallery_template");
@@ -41,7 +41,7 @@ function loadImages(submissions, categories) {
         title.innerText = category[0];
         link.href += "?" + category[0];
 
-        for (let i = category[1].length - 1; i > category[1].length - 8 && i >= 0; i--) {
+        for (let i = category[1].length - 1; i > category[1].length - 10 && i >= 0; i--) {
             let img = document.createElement("img")
             img.src = category[1][i].image;
             img.classList.add("container-fluid");
@@ -53,6 +53,11 @@ function loadImages(submissions, categories) {
             imageHolder.appendChild(link);
         }
         document.getElementById("galleries").appendChild(clone);
+
+
+        // display the announcements
+        const announcementsPlaceholder = document.getElementById("announcements");
+        announcementsPlaceholder.innerHTML = announcmentsText.replace(new RegExp('\r?\n','g'), '<br />');
     })
 
 }
