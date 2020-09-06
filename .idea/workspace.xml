@@ -20,14 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cf75665c-9e60-4fbc-93f0-36e38b44ad8a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/autolink-min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/gallery.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image.html" beforeDir="false" afterPath="$PROJECT_DIR$/image.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/image.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/image.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/request.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,8 +62,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/styles" />
       <recent name="$PROJECT_DIR$/scripts" />
+      <recent name="$PROJECT_DIR$/styles" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -85,7 +83,12 @@
       <workItem from="1597685229623" duration="646000" />
       <workItem from="1597964373853" duration="324000" />
       <workItem from="1597967550430" duration="394000" />
-      <workItem from="1597997835006" duration="9419000" />
+      <workItem from="1597997835006" duration="9877000" />
+      <workItem from="1598026040746" duration="130000" />
+      <workItem from="1599271543627" duration="4763000" />
+      <workItem from="1599281008677" duration="719000" />
+      <workItem from="1599333557961" duration="276000" />
+      <workItem from="1599335116886" duration="2231000" />
     </task>
     <servers />
   </component>
@@ -113,6 +116,10 @@
       <screen x="0" y="23" width="1440" height="823" />
     </state>
     <state x="529" y="207" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.823@0.23.1440.823" timestamp="1597275502938" />
+    <state x="372" y="235" key="EditFileWatcherDialog" timestamp="1599335672411">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="372" y="235" key="EditFileWatcherDialog/0.0.1440.900@0.0.1440.900" timestamp="1599335672411" />
     <state x="14" y="178" key="SettingsEditor" timestamp="1597142965627">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -122,12 +129,12 @@
       <screen x="0" y="23" width="1920" height="1002" />
     </state>
     <state x="830" y="161" width="586" height="735" key="find.popup/-1440.238.1440.877/0.23.1920.1002@0.23.1920.1002" timestamp="1597116060700" />
-    <state x="788" y="305" width="894" height="680" key="search.everywhere.popup" timestamp="1597358003137">
-      <screen x="0" y="23" width="1920" height="1006" />
+    <state x="591" y="252" width="670" height="608" key="search.everywhere.popup" timestamp="1599279495016">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="788" y="304" width="670" height="676" key="search.everywhere.popup/-1440.238.1440.877/0.23.1920.1002@0.23.1920.1002" timestamp="1597115767015" />
     <state x="788" y="305" width="894" height="680" key="search.everywhere.popup/-1440.238.1440.877/0.23.1920.1006@0.23.1920.1006" timestamp="1597358003137" />
-    <state x="591" y="252" width="670" height="608" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1597193261006" />
+    <state x="591" y="252" width="670" height="608" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1599279495016" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
