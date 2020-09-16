@@ -24,6 +24,7 @@ function populateMain(submissions, categories) {
     //     recentGallery.appendChild(link);
     // }
 
+    //fill gallery
 
     const template = document.getElementById("gallery_template");
 
@@ -54,10 +55,21 @@ function populateMain(submissions, categories) {
         }
         document.getElementById("galleries").appendChild(clone);
 
+        //announcementsPlaceholder.innerHTML = announcmentsText.replace(new RegExp('\r?\n','g'), '<br />');
+    })
 
-        // display the announcements
-        const announcementsPlaceholder = document.getElementById("announcements");
-        announcementsPlaceholder.innerHTML = announcmentsText.replace(new RegExp('\r?\n','g'), '<br />');
+    // display the announcements
+    const announcementsPlaceholder = document.getElementById("announcements");
+    let announcementLines = announcmentsText.split('\n');
+
+
+    announcementLines.forEach(line => {
+        let newLine = document.getElementById("newline").cloneNode();
+        console.log( line)
+        newLine.innerHTML = line.autoLink();
+        announcementsPlaceholder.appendChild(newLine);
+
+
     })
 
 }

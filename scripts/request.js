@@ -1,5 +1,9 @@
 var submissionArr = [];  //TODO change submissionsArr to a map (maybe)
 var categoriesMap = new Map();
+var userMap = new Map();
+var idMap = new Map();
+
+
 var announcmentsText = "nothing to see here"
 
 
@@ -29,46 +33,57 @@ function organiseData(data) {
     let maxRow = Number(data.feed.gs$rowCount.$t);
     let maxCol = 7;
     let rCount = 0;
-
+    let sub; // each individual user submission
 
     //may create blacklist or whitelist system.
 
     //Sorts cells by their submissions (which im super confused as to why it isn't already like that but whatever)
+
     for (let i = 9; i < cellArr.length; i++) {
-
         let cell = cellArr[i];
-        rCount = cell.gs$cell.row - 2;
 
-        if (submissionArr[rCount] == null) {
-            submissionArr[rCount] = new submission();
+        if (sub == null) {
+            sub = new submission();
         }
 
-
+        //IMPORTANT! This program relies on the assumption that for every submission there is an ID at col 9
         switch (Number(cell.gs$cell.col)) {
             case 1:
-                submissionArr[rCount].timestamp = cell.gs$cell.$t;
+                sub.timestamp = cell.gs$cell.$t;
                 break;
             case 3:
-                submissionArr[rCount].displayName = cell.gs$cell.$t;
+                sub.displayName = cell.gs$cell.$t;
+                if (!userMap.has(sub.displayName)) {
+                    userMap.set(sub.displayName, []);
+                }
+                userMap.get(sub.displayName).push(sub);
+
+
                 break;
             case 4:
-                submissionArr[rCount].description = cell.gs$cell.$t;
+                sub.description = cell.gs$cell.$t;
                 break;
             case 5:
-                if (!categoriesMap.has(cell.gs$cell.$t)) {
-                    categoriesMap.set(cell.gs$cell.$t, []);
+                sub.category = cell.gs$cell.$t;
+                if (!categoriesMap.has(sub.category)) {
+                    categoriesMap.set(sub.category, []);
                 }
-                submissionArr[rCount].category = cell.gs$cell.$t;
+                categoriesMap.get(sub.category).push(sub);
                 break;
 
             case 7:
-                submissionArr[rCount].title = cell.gs$cell.$t;
+                sub.title = cell.gs$cell.$t;
                 break;
             case 8:
-                submissionArr[rCount].image = cell.gs$cell.$t;
+                sub.image = cell.gs$cell.$t;
                 break;
             case 9:
-                submissionArr[rCount].id = cell.gs$cell.$t;
+                sub.id = cell.gs$cell.$t;
+                idMap.set(sub.id, sub);
+
+                //submission stored into submission array then reset for new user submission
+                submissionArr[cell.gs$cell.row - 2] = sub;
+                sub = null;
                 break;
             case 11:
                 if (Number(cell.gs$cell.row) === 2){
@@ -78,14 +93,6 @@ function organiseData(data) {
         }
     }
 
-    if (categoriesMap.size > 0) {
-        submissionArr.forEach(submission => {
-                if (categoriesMap.has(submission.category)) {
-                    categoriesMap.get(submission.category).push(submission);
-                }
-            }
-        )
-    }
 
 
 
