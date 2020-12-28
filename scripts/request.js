@@ -8,7 +8,7 @@ var announcmentsText = "nothing to see here"
 
 
 
-//JSON link: https://spreadsheets.google.com/feeds/cells/1fDiPcoEeUrMZASy5Gtp_uDZ9hDa7J9GVyzHRskv_tm4/1/public/full?alt=json
+//JSON link: https://spreadsheets.google.com/feeds/cells/1fDiPcoEeUrMZASy5Gtp_uDZ9hDa7J9GVyzHRskv_tm4/4/public/full?alt=json
 const url = "https://spreadsheets.google.com/feeds/cells/1fDiPcoEeUrMZASy5Gtp_uDZ9hDa7J9GVyzHRskv_tm4/1/public/full?alt=json"
 
 var getData =  function getData(){
@@ -35,11 +35,11 @@ function organiseData(data) {
     let rCount = 0;
     let sub; // each individual user submission
 
-    //may create blacklist or whitelist system.
+    //may create blacklist or whitelist system .
 
     //Sorts cells by their submissions (which im super confused as to why it isn't already like that but whatever)
 
-    for (let i = 9; i < cellArr.length; i++) {
+    for (let i = 12; i < cellArr.length; i++) {
         let cell = cellArr[i];
 
         if (sub == null) {
@@ -61,23 +61,25 @@ function organiseData(data) {
 
                 break;
             case 4:
-                sub.description = cell.gs$cell.$t;
+                sub.title = cell.gs$cell.$t;
                 break;
             case 5:
+                sub.description = cell.gs$cell.$t;
+                break;
+            case 6:
                 sub.category = cell.gs$cell.$t;
                 if (!categoriesMap.has(sub.category)) {
                     categoriesMap.set(sub.category, []);
                 }
                 categoriesMap.get(sub.category).push(sub);
                 break;
-
-            case 7:
-                sub.title = cell.gs$cell.$t;
-                break;
             case 8:
                 sub.image = cell.gs$cell.$t;
                 break;
             case 9:
+                sub.thumbnail = cell.gs$cell.$t;
+                break;
+            case 12:
                 sub.id = cell.gs$cell.$t;
                 idMap.set(sub.id, sub);
 
@@ -85,7 +87,7 @@ function organiseData(data) {
                 submissionArr[cell.gs$cell.row - 2] = sub;
                 sub = null;
                 break;
-            case 11:
+            case 21:
                 if (Number(cell.gs$cell.row) === 2){
                     announcmentsText = cell.gs$cell.$t;
                 }
@@ -101,12 +103,13 @@ function organiseData(data) {
 class submission{
     constructor() {
         this.timestamp;
-        this.title;
         this.displayName;
+        this.title;
         this.description = "";
         this.category;
         this.image;
         this.id;
+        this.thumbnail;
     }
 }
 

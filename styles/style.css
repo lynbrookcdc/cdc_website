@@ -4,6 +4,10 @@ a {
     color: black;
 }
 
+p{
+    text-align: left;
+}
+
 .large-logo{
     max-width: 400px;
     width: 40%;
@@ -27,8 +31,10 @@ a {
 .thumbnail {
     object-fit: contain;
     float: left;
-    height: 100%;
+    height: 200px;
+
     width: auto;
+
     -webkit-filter: brightness(100%);
 }
 

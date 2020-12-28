@@ -17,7 +17,8 @@ function loadImages() {
 
         for (let i = subject.length - 1; i >= 0; i--) {
             let img = document.createElement("img")
-            img.src = subject[i].image;
+            img.src = subject[i].thumbnail;
+            img.loading = "lazy";
             img.classList.add("container-fluid");
             img.classList.add("thumbnail");
             img.classList.add("py-2");
