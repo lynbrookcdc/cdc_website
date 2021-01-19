@@ -8,6 +8,12 @@ p{
     text-align: left;
 }
 
+.centered-horiz{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .large-logo{
     max-width: 400px;
     width: 40%;
@@ -38,6 +44,15 @@ p{
     -webkit-filter: brightness(100%);
 }
 
+.arrow{
+    stroke: black;
+    stroke-width: 1pt;
+    transition-duration: 0.2s;
+}
+
+.arrow:hover{
+    stroke-width: 0;
+}
 /*
 https://stackoverflow.com/questions/17481660/darken-background-image-on-hover
  */
