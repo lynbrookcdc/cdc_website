@@ -8,12 +8,28 @@
     <title>Title</title>
 </head>
 <body>
-<button type="button" onclick="history.go(-1)" class="btn btn-outline-dark ml-2 mt-2 font-weight-bold" style="border-width: 3pt;">X</button>
+<button id="exit_button" type="button" onclick="history.go(-1)" class="btn btn-outline-dark ml-2 mt-2 font-weight-bold" style="border-width: 3pt;">X</button>
 
 <div class="row mx-5">
     <div class="row" style="margin: auto;">
-        <img style="border-radius:10%; height:auto; max-height: 85vh; background: #cae3fa;  max-width: 100%" class="float-none image-fluid">
-
+        <div class="col" style="text-align: center">
+            <img style="border-radius:10%; height: fit-content; max-height:70vh; width: auto; background: #cae3fa;">
+            <div class ="row centered-horiz" style="margin-top: 20px">
+                <!--https://visualpharm.com/free-icons/back%20arrow-595b40b75ba036ed117d5907-->
+                <a id="previous_link" style="margin-right: 20px">
+                <svg height="80px" class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" >
+                    <path d="M25 2C12.3 2 2 12.3 2 25 2 37.7 12.3 48 25 48 37.7 48 48 37.7 48 25 48 12.3 37.7 2 25 2zM25 4C36.6 4 46 13.4 46 25 46 36.6 36.6 46 25 46 13.4 46 4 36.6 4 25 4 13.4 13.4 4 25 4zM20.9 16A1 1 0 0 0 20.3 16.3L12.4 24.2 12.3 24.2A1 1 0 0 0 12.3 24.3L12.3 24.3A1 1 0 0 0 12.2 24.3 1 1 0 0 0 12.2 24.4 1 1 0 0 0 12.2 24.4 1 1 0 0 0 12.1 24.5 1 1 0 0 0 12.1 24.5 1 1 0 0 0 12 24.9 1 1 0 0 0 12 24.9 1 1 0 0 0 12 25 1 1 0 0 0 12 25.1 1 1 0 0 0 12 25.1 1 1 0 0 0 12.1 25.5 1 1 0 0 0 12.1 25.5 1 1 0 0 0 12.2 25.6 1 1 0 0 0 12.2 25.6 1 1 0 0 0 12.2 25.7 1 1 0 0 0 12.3 25.7 1 1 0 0 0 12.3 25.7 1 1 0 0 0 12.5 25.9L20.3 33.7A1 1 0 1 0 21.7 32.3L15.4 26 37 26A1 1 0 1 0 37 24L15.4 24 21.7 17.7A1 1 0 0 0 20.9 16z"
+                          font-family="Sans"/>
+                </svg>
+                </a>
+                <a id="next_link" style="margin-left: 20px">
+                <svg height="80px" class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" style="transform: rotate(180deg)">
+                    <path d="M25 2C12.3 2 2 12.3 2 25 2 37.7 12.3 48 25 48 37.7 48 48 37.7 48 25 48 12.3 37.7 2 25 2zM25 4C36.6 4 46 13.4 46 25 46 36.6 36.6 46 25 46 13.4 46 4 36.6 4 25 4 13.4 13.4 4 25 4zM20.9 16A1 1 0 0 0 20.3 16.3L12.4 24.2 12.3 24.2A1 1 0 0 0 12.3 24.3L12.3 24.3A1 1 0 0 0 12.2 24.3 1 1 0 0 0 12.2 24.4 1 1 0 0 0 12.2 24.4 1 1 0 0 0 12.1 24.5 1 1 0 0 0 12.1 24.5 1 1 0 0 0 12 24.9 1 1 0 0 0 12 24.9 1 1 0 0 0 12 25 1 1 0 0 0 12 25.1 1 1 0 0 0 12 25.1 1 1 0 0 0 12.1 25.5 1 1 0 0 0 12.1 25.5 1 1 0 0 0 12.2 25.6 1 1 0 0 0 12.2 25.6 1 1 0 0 0 12.2 25.7 1 1 0 0 0 12.3 25.7 1 1 0 0 0 12.3 25.7 1 1 0 0 0 12.5 25.9L20.3 33.7A1 1 0 1 0 21.7 32.3L15.4 26 37 26A1 1 0 1 0 37 24L15.4 24 21.7 17.7A1 1 0 0 0 20.9 16z"
+                          font-family="Sans"/>
+                </svg>
+                </a>
+            </div>
+        </div>
         <div class="col">
             <h1 id="title">
             </h1>
