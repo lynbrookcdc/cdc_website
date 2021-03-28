@@ -39,7 +39,7 @@ function organiseData(data) {
 
     //Sorts cells by their submissions (which im super confused as to why it isn't already like that but whatever)
 
-    for (let i = 9; i < cellArr.length; i++) {
+    for (let i = 12; i < cellArr.length; i++) {
         let cell = cellArr[i];
 
         if (sub == null) {
@@ -85,7 +85,7 @@ function organiseData(data) {
                 submissionArr[cell.gs$cell.row - 2] = sub;
                 sub = null;
                 break;
-            case 11:
+            case 22:
                 if (Number(cell.gs$cell.row) === 2){
                     announcmentsText = cell.gs$cell.$t;
                 }
