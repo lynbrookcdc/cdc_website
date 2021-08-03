@@ -1,63 +1,93 @@
-
-a {
-    text-decoration: none;
-    color: black;
+.center {
+    margin: auto;
 }
 
-p{
-    text-align: left;
-}
-
-.centered-horiz{
+.center-horiz{
     width: fit-content;
     margin-left: auto;
-    margin-right: auto;
-}
-
-.large-logo{
-    max-width: 400px;
-    width: 40%;
-}
-.darkblue{
-    background: #262853;
-}
-.lightblue{
-    background: #9db9f5;
-}
-
-.previewGallery{
-    overflow: hidden;
-}
-
-.galleryTitle{
-    float: left;
+    margin-right: auto
 }
 
 
-.thumbnail {
-    object-fit: contain;
-    float: left;
-    height: 200px;
-
-    width: auto;
-
-    -webkit-filter: brightness(100%);
+.btn-outline-light {
+    border-width: medium;
+    border-radius: 10px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
-.arrow{
-    stroke: black;
-    stroke-width: 1pt;
-    transition-duration: 0.2s;
+.tab {
+    margin-left: 40px;
 }
 
-.arrow:hover{
-    stroke-width: 0;
+.tab-mini{
+    margin-left: 20px
 }
+
+.vanish {
+    display: none;
+    margin: 0;
+}
+
+
+p{
+    font-family: 'Roboto', sans-serif;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', 'sans-serif';
+    width: fit-content;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+
+h1, h2, h3 {
+    font-weight: 600;
+}
+
+h4{
+    font-weight: 500;
+}
+
+.header {
+    width: fit-content;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.logo {
+    height: auto;
+    max-width: 45vh;
+    width: 100vw;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.section{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.carousel{
+    height: 20vh;
+}
+
+.thumbnail{
+    background-color: #bbbbbb;
+    border-radius: 4px;
+    height: 100%;
+    margin-left: .5rem;
+    margin-right: .5rem;
+
+}
+
 /*
 https://stackoverflow.com/questions/17481660/darken-background-image-on-hover
  */
-
-
 .thumbnail:hover {
     -webkit-filter: brightness(85%);
     -webkit-transition: all .2s ease;
@@ -65,4 +95,76 @@ https://stackoverflow.com/questions/17481660/darken-background-image-on-hover
     -o-transition: all .2s ease;
     -ms-transition: all .2s ease;
     transition: all .2s ease;
+}
+
+.navbar {
+    min-height: 5.5vh;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.nav-scale {
+    margin-bottom: 0;
+    font-size: 4.5vh;
+}
+
+.navbar-brand {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.nav-link {
+    font-weight: 600;
+    font-size: 2vh;
+}
+
+.navbar-toggler-icon {
+    width: 3.5vh;
+    height: 3.5vh;
+}
+
+.navbar-toggler {
+    padding-right: 0;
+    padding-left: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-width: 0;
+
+}
+
+.bg-a {
+    background-color: #262753;
+    height: fit-content;
+    padding-bottom: 2rem;
+}
+
+
+.bg-b {
+    background-color: #6170A7;
+}
+
+@media only screen and (min-width: 768px) {
+    h1 {
+
+        font-size: 3rem;
+    }
+
+    .logo {
+        margin-bottom: 3rem;
+    }
+
+    .header {
+        padding-left: 0rem;
+        padding-right: 0rem;
+    }
+
+    .vanish {
+        display: initial;
+    }
+
+    .bg-a {
+        padding-bottom: 0;
+    }
 }

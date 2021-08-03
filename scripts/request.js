@@ -4,6 +4,9 @@ var userMap = new Map();
 var idMap = new Map();
 var AA;
 
+
+
+
 var announcmentsText = "nothing to see here"
 
 const sheetID = "1fDiPcoEeUrMZASy5Gtp_uDZ9hDa7J9GVyzHRskv_tm4";
@@ -67,7 +70,9 @@ function getSheet (access_token) {
 let imageID =  "1qcPa8PZQmRJSz5DxG97jyEwCYGM7s5UY"
 
 function getFile (access_token) {
-
+//TODO download the physical image and just set it as source
+// and
+// set the file URL to the download url of a certain image and check the properties of the output
     let parameters  = new URLSearchParams( {
         fields: 'webContentLink'
     })
