@@ -74,12 +74,15 @@ h4{
 
 .carousel{
     height: 20vh;
+    width: fit-content;
+    margin-right: 0;
+    margin-left: 0;
 }
 
 .thumbnail{
     background-color: #bbbbbb;
-    border-radius: 4px;
-    height: 100%;
+    height: inherit;
+    width: auto;
     margin-left: .5rem;
     margin-right: .5rem;
 
@@ -134,6 +137,9 @@ https://stackoverflow.com/questions/17481660/darken-background-image-on-hover
 
 }
 
+
+
+
 .bg-a {
     background-color: #262753;
     height: fit-content;
@@ -143,6 +149,46 @@ https://stackoverflow.com/questions/17481660/darken-background-image-on-hover
 
 .bg-b {
     background-color: #6170A7;
+}
+
+.thumbnail-container {
+    position: relative;
+    text-align: center;
+    width: fit-content;
+    height: inherit;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+/* Bottom left text */
+.thumbnail-text {
+    width: 95%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-weight: bold;
+    text-align: left;
+    color: white;
+}
+
+.thumbnail-highlight{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /*background-color: black;*/
+    width: 100%;
+    height: inherit;
+}
+
+.thumbnail:hover {
+    -webkit-filter: brightness(85%);
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    transition: all .2s ease;
 }
 
 @media only screen and (min-width: 768px) {
