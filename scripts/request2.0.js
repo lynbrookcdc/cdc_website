@@ -1,29 +1,32 @@
-var oldSpreadsheetID = '1fDiPcoEeUrMZASy5Gtp_uDZ9hDa7J9GVyzHRskv_tm4';
-var spreadsheetID = "1plC41QK-fXTR5ElyIUAFEZb3HBhQE64mNA7vWKFbmkY";
+let spreadsheetID = "1plC41QK-fXTR5ElyIUAFEZb3HBhQE64mNA7vWKFbmkY";
 
-var categoriesMap = new Map();
-var userMap = new Map();
-var idMap = new Map();
-
+const categoriesMap = new Map();
+const userMap = new Map();
+const idMap = new Map();
 
 
-
-
-function start() {
+function loadData() {
     // 2. Initialize the JavaScript client library.
-    gapi.client.init({
-        'apiKey': API_KEY,
-        // Your API key will be automatically added to the Discovery Document URLs.
-        'discoveryDocs': ['https://sheets.googleapis.com/$discovery/rest?version=v4'],
-    }).then(getSubmissions)
-        .then(function (response) {
-            console.log(response)
-            sortEntries(response.result.values);
-        }, function (reason) {
-            console.log(reason);
-            console.log('Error: ' + reason.result.error.message);
-        });
-};
+    return new Promise((resolve, reject) => {
+        gapi.load('client', () => {
+                gapi.client.init({
+                    'apiKey': API_KEY,
+                    // Your API key will be automatically added to the Discovery Document URLs.
+                    'discoveryDocs': ['https://sheets.googleapis.com/$discovery/rest?version=v4'],
+                }).then(getSubmissions)
+                    .then(function (response) {
+                        console.log(response)
+                        sortEntries(response.result.values);
+                        resolve();
+                    }, function (reason) {
+                        console.log(reason);
+                        console.log('Error: ' + reason.result.error.message);
+                        reject();
+                    });
+            }
+        )
+    })
+}
 
 function getSubmissions(){
         // 3. Initialize and make the API request.
@@ -85,10 +88,3 @@ function sortEntries(submissionArr){
     console.log(userMap);
     console.log(idMap);
 }
-
-
-
-
-
-// 1. Load the JavaScript client library.
-gapi.load('client', start);
