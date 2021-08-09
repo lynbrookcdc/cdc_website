@@ -17,18 +17,20 @@
 }
 
 .tab {
-    margin-left: 40px;
+    margin-left: 2rem;
 }
 
 .tab-mini{
-    margin-left: 20px
+    margin-left: .2rem;
 }
 
 .vanish {
     display: none;
-    margin: 0;
 }
 
+.no-margin{
+    margin: 0;
+}
 
 p{
     font-family: 'Roboto', sans-serif;
@@ -83,9 +85,10 @@ h4{
     background-color: #bbbbbb;
     height: inherit;
     width: auto;
-    margin-left: .5rem;
-    margin-right: .5rem;
-
+    margin-left: 0;
+    margin-right: 0;
+    padding-right: 0;
+    padding-left: 0;
 }
 
 /*
@@ -151,6 +154,10 @@ https://stackoverflow.com/questions/17481660/darken-background-image-on-hover
     background-color: #6170A7;
 }
 
+.bg-c{
+    background-color: #e3e3e3;
+}
+
 .thumbnail-container {
     position: relative;
     text-align: center;
@@ -158,10 +165,12 @@ https://stackoverflow.com/questions/17481660/darken-background-image-on-hover
     height: inherit;
     padding-right: 0;
     padding-left: 0;
+    margin-right: 1rem;
 }
 
 /* Bottom left text */
 .thumbnail-text {
+    margin-left: .5rem;
     width: 95%;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -177,9 +186,14 @@ https://stackoverflow.com/questions/17481660/darken-background-image-on-hover
     left: 0;
     right: 0;
     bottom: 0;
-    /*background-color: black;*/
     width: 100%;
     height: inherit;
+    opacity: 0;
+    transition: opacity .1s;
+}
+.thumbnail-highlight:hover{
+    opacity: 1;
+    background-color: rgba(0,0,0,0.2);
 }
 
 .thumbnail:hover {
@@ -190,6 +204,14 @@ https://stackoverflow.com/questions/17481660/darken-background-image-on-hover
     -ms-transition: all .2s ease;
     transition: all .2s ease;
 }
+/*.thumbnail-container:hover {*/
+/*    -webkit-filter: brightness(85%);*/
+/*    -webkit-transition: all .2s ease;*/
+/*    -moz-transition: all .2s ease;*/
+/*    -o-transition: all .2s ease;*/
+/*    -ms-transition: all .2s ease;*/
+/*    transition: all .2s ease;*/
+/*}*/
 
 @media only screen and (min-width: 768px) {
     h1 {

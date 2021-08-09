@@ -5,27 +5,27 @@ const userMap = new Map();
 const idMap = new Map();
 
 
+
 function loadData() {
     // 2. Initialize the JavaScript client library.
     return new Promise((resolve, reject) => {
-        gapi.load('client', () => {
-                gapi.client.init({
-                    'apiKey': API_KEY,
-                    // Your API key will be automatically added to the Discovery Document URLs.
-                    'discoveryDocs': ['https://sheets.googleapis.com/$discovery/rest?version=v4'],
-                }).then(getSubmissions)
-                    .then(function (response) {
-                        console.log(response)
-                        sortEntries(response.result.values);
-                        resolve();
-                    }, function (reason) {
-                        console.log(reason);
-                        console.log('Error: ' + reason.result.error.message);
-                        reject();
-                    });
-            }
-        )
-    })
+        gapi.load('client', function () {
+            gapi.client.init({
+                'apiKey': API_KEY,
+                // Your API key will be automatically added to the Discovery Document URLs.
+                'discoveryDocs': ['https://sheets.googleapis.com/$discovery/rest?version=v4'],
+            }).then(getSubmissions)
+                .then(function (response) {
+                    console.log(response);
+                    sortEntries(response.result.values);
+                    resolve();
+                }, function (reason) {
+                    console.log(reason);
+                    console.log('Error: ' + reason.result.error.message);
+                    reject();
+                });
+        })
+    });
 }
 
 function getSubmissions(){
@@ -37,7 +37,7 @@ function getSubmissions(){
 }
 
 function sortEntries(submissionArr){
-    for(let i = submissionArr.length - 1; i >= 0; i--){
+    for(let i = 0; i < submissionArr.length; i++){
         let id;
         if (submissionArr[i][8] == ""){
             id = submissionArr[i][9];
