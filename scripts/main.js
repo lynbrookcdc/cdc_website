@@ -1,5 +1,8 @@
 
-getData().then(createGalleries);
+getData().then(() => {
+        displayAnnouncements();
+        createGalleries();
+    });
 
 
 function createGalleries(){
@@ -25,9 +28,10 @@ function createGalleries(){
     })
 }
 
-//TODO finish define announcements
-function defineAnnoun() {
-    
+//TODO finish display announcements
+function displayAnnouncements() {
+    let announcementsPlaceholder = document.getElementById("announcements");
+    announcementsPlaceholder.innerHTML = announcementsText.autoLink();
 }
 
 

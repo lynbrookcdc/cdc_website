@@ -4,6 +4,8 @@ const categoriesMap = new Map();
 const userMap = new Map();
 const idMap = new Map();
 
+var announcementsText = "";
+
 
 
 function getData() {
@@ -14,10 +16,10 @@ function getData() {
                 'apiKey': API_KEY,
                 // Your API key will be automatically added to the Discovery Document URLs.
                 'discoveryDocs': ['https://sheets.googleapis.com/$discovery/rest?version=v4'],
-            }).then(getSubmissions)
+            }).then(getAnnounSubmissions)
                 .then(function (response) {
-                    console.log(response);
-                    sortEntries(response.result.values);
+                    announcementsText = response.result.valueRanges[0].values[0];
+                    sortEntries(response.result.valueRanges[1].values);
                     resolve();
                 }, function (reason) {
                     console.log(reason);
@@ -28,11 +30,11 @@ function getData() {
     });
 }
 
-function getSubmissions(){
+function getAnnounSubmissions(){
         // 3. Initialize and make the API request.
-        return gapi.client.sheets.spreadsheets.values.get({
+        return gapi.client.sheets.spreadsheets.values.batchGet({
             spreadsheetId: spreadsheetID,
-            range: 'C2:L'
+            ranges: ['Backend!A2' , 'C2:L']
         })
 }
 

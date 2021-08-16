@@ -8,7 +8,9 @@
     color: #3d6fbf;
 }
 
-
+.body-text{
+    white-space: pre-line;
+}
 
 .wrap-content{
     width: fit-content;
