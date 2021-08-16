@@ -1,9 +1,45 @@
+
+.modern-link{
+    color: black;
+    text-decoration: none;
+    transition: color .2s;
+}
+.modern-link:hover{
+    color: #3d6fbf;
+}
+
+
+
+.wrap-content{
+    width: fit-content;
+}
+.full-width{
+    width: 100%;
+}
+
+.section{
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+.section-lg{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.section-sml{
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+.margin-x-sml{
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
+
 .center {
     margin: auto;
 }
 
-.center-horiz{
-    width: fit-content;
+.center-x{
     margin-left: auto;
     margin-right: auto
 }
@@ -14,6 +50,18 @@
     border-radius: 10px;
     margin-top: 2rem;
     margin-bottom: 2rem;
+}
+.button-circle{
+    background-color: transparent;
+    border-width: 0;
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    transition: .3s;
+}
+
+.button-circle:hover{
+background-color: #bbbbbb;
 }
 
 .tab {
@@ -28,10 +76,13 @@
     display: none;
 }
 
-.no-margin{
-    margin: 0;
+.title{
+    font-size: 4rem;
 }
 
+.gallery-title{
+    font-size: 2rem;
+}
 p{
     font-family: 'Roboto', sans-serif;
 }
@@ -40,20 +91,15 @@ p{
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Raleway', 'sans-serif';
     width: fit-content;
-}
-
-h1 {
-    font-size: 4rem;
-}
-
-
-h1, h2, h3 {
     font-weight: 600;
 }
 
 h4{
-    font-weight: 500;
+    font-weight: normal;
 }
+
+
+
 
 .header {
     width: fit-content;
@@ -69,38 +115,11 @@ h4{
     margin-bottom: 1.5rem;
 }
 
-.section{
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
-
 .carousel{
-    height: 20vh;
+    height: 18vh;
     width: fit-content;
     margin-right: 0;
     margin-left: 0;
-}
-
-.thumbnail{
-    background-color: #bbbbbb;
-    height: inherit;
-    width: auto;
-    margin-left: 0;
-    margin-right: 0;
-    padding-right: 0;
-    padding-left: 0;
-}
-
-/*
-https://stackoverflow.com/questions/17481660/darken-background-image-on-hover
- */
-.thumbnail:hover {
-    -webkit-filter: brightness(85%);
-    -webkit-transition: all .2s ease;
-    -moz-transition: all .2s ease;
-    -o-transition: all .2s ease;
-    -ms-transition: all .2s ease;
-    transition: all .2s ease;
 }
 
 .navbar {
@@ -158,6 +177,29 @@ https://stackoverflow.com/questions/17481660/darken-background-image-on-hover
     background-color: #e3e3e3;
 }
 
+.thumbnail{
+    background-color: #bbbbbb;
+    height: 18vh;
+    width: auto;
+    margin-left: 0;
+    margin-right: 0;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+/*
+https://stackoverflow.com/questions/17481660/darken-background-image-on-hover
+ */
+.thumbnail:hover {
+    -webkit-filter: brightness(85%);
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    transition: all .2s ease;
+}
+
+
 .thumbnail-container {
     position: relative;
     text-align: center;
@@ -166,6 +208,8 @@ https://stackoverflow.com/questions/17481660/darken-background-image-on-hover
     padding-right: 0;
     padding-left: 0;
     margin-right: 1rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
 }
 
 /* Bottom left text */
@@ -196,22 +240,10 @@ https://stackoverflow.com/questions/17481660/darken-background-image-on-hover
     background-color: rgba(0,0,0,0.2);
 }
 
-.thumbnail:hover {
-    -webkit-filter: brightness(85%);
-    -webkit-transition: all .2s ease;
-    -moz-transition: all .2s ease;
-    -o-transition: all .2s ease;
-    -ms-transition: all .2s ease;
-    transition: all .2s ease;
+#galleries-section{
+    scroll-behavior: smooth;
 }
-/*.thumbnail-container:hover {*/
-/*    -webkit-filter: brightness(85%);*/
-/*    -webkit-transition: all .2s ease;*/
-/*    -moz-transition: all .2s ease;*/
-/*    -o-transition: all .2s ease;*/
-/*    -ms-transition: all .2s ease;*/
-/*    transition: all .2s ease;*/
-/*}*/
+
 
 @media only screen and (min-width: 768px) {
     h1 {
@@ -235,4 +267,27 @@ https://stackoverflow.com/questions/17481660/darken-background-image-on-hover
     .bg-a {
         padding-bottom: 0;
     }
+    .section{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+
+}
+
+@media only screen and (min-width: 1410px) {
+    .container-xxxl{
+        width: 1410px;
+    }
+}
+
+.no-margin{
+    margin: 0;
+}
+.no-margin-bot{
+    margin-bottom: 0;
+}
+
+.no-padding{
+    padding: 0;
 }
