@@ -1,32 +1,17 @@
-let user = location.search.substring(1).replace(/%20/g, " ");
-let tabTitle = document.querySelector("title");
-let userTitle = document.querySelector("h1")
-let imageContainer = document.getElementById("image_container");
+//TODO make user page more unique or
+// TODO generalize gallery functions
 
-userTitle.innerText = user;
-tabTitle.innerText = user;
+// TODO Use URL parameters correctly
+let username = location.search.substring(1).replace(/%20/g, " ");
+let tabTitle = document.querySelector("title");
+let galleryTitle = document.getElementById("galleryTitle")
+let imageContainer = document.getElementById("imageContainer");
+let thumbnailTemplate = document.getElementById("thumbnail-template");
+
+tabTitle.innerText = username;
+galleryTitle.innerText = username;
 
 
 getData().then(() => {
-        loadImages();
-    }
-)
-
-function loadImages() {
-        let subject = userMap.get(user);
-
-        for (let i = subject.length - 1; i >= 0; i--) {
-            let img = document.createElement("img")
-            img.src = subject[i].image;
-            img.classList.add("container-fluid");
-            img.classList.add("thumbnail");
-            img.classList.add("py-2");
-
-            let link = document.createElement('a');
-            link.href = "image.html?" + subject[i].id;
-            link.appendChild(img);
-            imageContainer.appendChild(link);
-    //    }
-
-    }
-}
+    inflateThumbnails(imageContainer, userMap.get(username), thumbnailTemplate, true);
+})

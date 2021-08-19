@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="icon" href="images/cdcLogo.png">
-    <title></title>
+    <title>Lynbrook CDC</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -17,6 +17,8 @@
 
     <link rel="stylesheet" href="styles/style.css">
 </head>
+
+
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-b">
@@ -42,43 +44,75 @@
     </div>
 </nav>
 
-<div class="section">
-<div class="section-sml margin-x-sml align-items-center">
-    <div class="row center-x container">
-        <button class="button-circle button-circle-image no-padding button" onclick="history.go(-1)">
-            <svg class="arrow" height="24" width="24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="4 4.5 8 7">
-                <path fill-rule="evenodd"
-                      d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
-            </svg>
-        </button>
+<div class="bg-a">
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <img class="logo" src="images/cdcLogo.png">
+            <div class="header d-inline-flex flex-column justify-content-center">
+                <h1 class="title text-light no-margin">Character Design Club</h1>
+                <h5 class="text-light no-margin vanish">@ LYNBROOK HIGH SCHOOL</h5>
+                <button type="button" class="btn btn-outline-light" onclick="location.href='https://forms.gle/zc8ngbnKJJyvLB9N9'"><h3 class="center">Submit Art</h3></button>
+            </div>
+        </div>
     </div>
 </div>
 
-
-<div class="container d-flex justify-content-center flex-wrap wrap-content">
-    <img src="" class="image rounded-lg" loading="lazy">
-    <div class="col margin-x wrap-content">
-        <h1></h1>
-        <h4 class="font-bold">By: <a id="username" class="modern-link" href="#"></a></h4>
-        <h4 class="font-bold">Category: <a id="category" class="modern-link" href="#"></a></h4>
-        <p class="body-text wrap-content"></p>
+<div class="section-lg margin-x-sml">
+    <div class="section">
+        <div class="col container">
+            <h2>Announcements</h2>
+            <p id="announcements" class="body-text section-sml wrap-content">
+            </p>
+        </div>
     </div>
+
+
+    <div id="galleries-section" class="section-lg d-flex flex-column align-items-center container-lg">
+        <template id="carousel-template">
+            <div class="section d-flex flex-column full-width">
+                <a href="#" class="d-flex flex-row align-items-end modern-link wrap-content">
+                    <h4>Category Title</h4>
+                    <h6 class="tab-mini">see all</h6>
+                </a>
+                <div id="carousel-max">
+                    <div id="carousel" class="carousel row overflow-hidden">
+
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <template id="thumbnail-template">
+            <a class="thumbnail-container rounded" href="#">
+                <div class="thumbnail-highlight d-flex flex-column-reverse ">
+                    <h6 class="thumbnail-text">THIS IS THE TITLE OF A LONG thing</h6>
+                </div>
+                <img class="thumbnail bg-c" src="" loading="lazy">
+            </a>
+        </template>
+    </div>
+
 </div>
-</div>
 
-
-
+<!--https://github.com/google/google-api-javascript-client-->
 <script src="https://apis.google.com/js/api.js"></script>
 <script src="scripts/request.js"></script>
+
 
 <script src="scripts/linkify.min.js"></script>
 <script src="scripts/linkify-string.min.js"></script>
 
-<script src="scripts/image.js"></script>
 
+<script src="scripts/main.js"></script>
+<script src="scripts/home.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+
+
 </body>
 </html>
+
+
+
