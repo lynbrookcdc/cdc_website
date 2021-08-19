@@ -2,6 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="images/cdcLogo.png">
+    <title></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
 
@@ -10,58 +15,68 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@500;700&display=swap"
           rel="stylesheet">
 
-    <link href="styles/style.css" rel="stylesheet">
-    <link rel="icon" href="images/cdcLogo.png">
-    <title>Title</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-<button id="exit_button" type="button" onclick="history.go(-1)" class="btn btn-outline-dark ml-2 mt-2 font-weight-bold" style="border-width: 3pt;">X</button>
 
-<div class="row mx-5">
-    <div class="row" style="margin: auto;">
-        <div class="col" style="text-align: center">
-            <img style="border-radius:10%; height: fit-content; max-height:70vh; width: auto; background: #cae3fa;">
-            <div class ="row centered-horiz" style="margin-top: 20px">
-                <!--https://visualpharm.com/free-icons/back%20arrow-595b40b75ba036ed117d5907-->
-                <a id="previous_link" style="margin-right: 20px">
-                <svg height="80px" class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" >
-                    <path d="M25 2C12.3 2 2 12.3 2 25 2 37.7 12.3 48 25 48 37.7 48 48 37.7 48 25 48 12.3 37.7 2 25 2zM25 4C36.6 4 46 13.4 46 25 46 36.6 36.6 46 25 46 13.4 46 4 36.6 4 25 4 13.4 13.4 4 25 4zM20.9 16A1 1 0 0 0 20.3 16.3L12.4 24.2 12.3 24.2A1 1 0 0 0 12.3 24.3L12.3 24.3A1 1 0 0 0 12.2 24.3 1 1 0 0 0 12.2 24.4 1 1 0 0 0 12.2 24.4 1 1 0 0 0 12.1 24.5 1 1 0 0 0 12.1 24.5 1 1 0 0 0 12 24.9 1 1 0 0 0 12 24.9 1 1 0 0 0 12 25 1 1 0 0 0 12 25.1 1 1 0 0 0 12 25.1 1 1 0 0 0 12.1 25.5 1 1 0 0 0 12.1 25.5 1 1 0 0 0 12.2 25.6 1 1 0 0 0 12.2 25.6 1 1 0 0 0 12.2 25.7 1 1 0 0 0 12.3 25.7 1 1 0 0 0 12.3 25.7 1 1 0 0 0 12.5 25.9L20.3 33.7A1 1 0 1 0 21.7 32.3L15.4 26 37 26A1 1 0 1 0 37 24L15.4 24 21.7 17.7A1 1 0 0 0 20.9 16z"
-                          font-family="Sans"/>
-                </svg>
-                </a>
-                <a id="next_link" style="margin-left: 20px">
-                <svg height="80px" class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" style="transform: rotate(180deg)">
-                    <path d="M25 2C12.3 2 2 12.3 2 25 2 37.7 12.3 48 25 48 37.7 48 48 37.7 48 25 48 12.3 37.7 2 25 2zM25 4C36.6 4 46 13.4 46 25 46 36.6 36.6 46 25 46 13.4 46 4 36.6 4 25 4 13.4 13.4 4 25 4zM20.9 16A1 1 0 0 0 20.3 16.3L12.4 24.2 12.3 24.2A1 1 0 0 0 12.3 24.3L12.3 24.3A1 1 0 0 0 12.2 24.3 1 1 0 0 0 12.2 24.4 1 1 0 0 0 12.2 24.4 1 1 0 0 0 12.1 24.5 1 1 0 0 0 12.1 24.5 1 1 0 0 0 12 24.9 1 1 0 0 0 12 24.9 1 1 0 0 0 12 25 1 1 0 0 0 12 25.1 1 1 0 0 0 12 25.1 1 1 0 0 0 12.1 25.5 1 1 0 0 0 12.1 25.5 1 1 0 0 0 12.2 25.6 1 1 0 0 0 12.2 25.6 1 1 0 0 0 12.2 25.7 1 1 0 0 0 12.3 25.7 1 1 0 0 0 12.3 25.7 1 1 0 0 0 12.5 25.9L20.3 33.7A1 1 0 1 0 21.7 32.3L15.4 26 37 26A1 1 0 1 0 37 24L15.4 24 21.7 17.7A1 1 0 0 0 20.9 16z"
-                          font-family="Sans"/>
-                </svg>
-                </a>
-            </div>
-        </div>
-        <div class="col">
-            <h1 id="title">
-            </h1>
-            <a id="name_link" style="text-decoration: none;">
-                <h4 id="name">
-                </h4>
-            </a>
-
-            <h4 id="category">
-            </h4>
-            <p class="py-3" id="description">
-            </p>
+<nav class="navbar navbar-expand-lg navbar-dark bg-b">
+    <div class="container-fluid" style="height: inherit">
+        <a class="navbar-brand" href="home.html"><h2 class="text-light nav-scale">cdc</h2></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="gallery.html">gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://linktr.ee/lynbrookcdc">links</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contacts.html">contacts</a>
+                </li>
+            </ul>
         </div>
     </div>
+</nav>
 
+<div class="section">
+<div class="section-sml margin-x-sml align-items-center">
+    <div class="row center-x container">
+        <button class="button-circle button-circle-image no-padding button" onclick="history.go(-1)">
+            <svg class="arrow" height="24" width="24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="4 4.5 8 7">
+                <path fill-rule="evenodd"
+                      d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+            </svg>
+        </button>
+    </div>
 </div>
 
 
+<div class="container d-flex justify-content-center flex-wrap wrap-content">
+    <img src="" class="image rounded-lg" loading="lazy">
+    <div class="col margin-x wrap-content">
+        <h1></h1>
+        <h4 class="font-bold">By: <a id="username" class="modern-link" href="#"></a></h4>
+        <h4 class="font-bold">Category: <a id="category" class="modern-link" href="#"></a></h4>
+        <p class="body-text wrap-content"></p>
+    </div>
+</div>
+</div>
 
 
 
 <script src="scripts/secrets.js"></script>
 <script src="https://apis.google.com/js/api.js"></script>
 <script src="scripts/request.js"></script>
+
+<script src="scripts/linkify.min.js"></script>
+<script src="scripts/linkify-string.min.js"></script>
+
 <script src="scripts/image.js"></script>
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"

@@ -16,9 +16,9 @@ function getData() {
                 'apiKey': API_KEY,
                 // Your API key will be automatically added to the Discovery Document URLs.
                 'discoveryDocs': ['https://sheets.googleapis.com/$discovery/rest?version=v4'],
-            }).then(getAnnounSubmissions)
+            }).then(getAnnouncementsSubmissions)
                 .then(function (response) {
-                    announcementsText = response.result.valueRanges[0].values[0];
+                    announcementsText = response.result.valueRanges[0].values[0][0];
                     sortEntries(response.result.valueRanges[1].values);
                     resolve();
                 }, function (reason) {
@@ -30,7 +30,7 @@ function getData() {
     });
 }
 
-function getAnnounSubmissions(){
+function getAnnouncementsSubmissions(){
         // 3. Initialize and make the API request.
         return gapi.client.sheets.spreadsheets.values.batchGet({
             spreadsheetId: spreadsheetID,
@@ -41,10 +41,16 @@ function getAnnounSubmissions(){
 function sortEntries(submissionArr){
     for(let i = 0; i < submissionArr.length; i++){
         let id;
+        let image;
+        let thumb;
         if (submissionArr[i][8] == ""){
+            image = submissionArr[i][5];
+            thumb = submissionArr[i][5];
             id = submissionArr[i][9];
         }
         else{
+            image = submissionArr[i][6];
+            thumb = submissionArr[i][7];
             id = submissionArr[i][8];
         }
 
@@ -55,9 +61,8 @@ function sortEntries(submissionArr){
             title: submissionArr[i][1],
             description: submissionArr[i][2],
             category: submissionArr[i][3],
-            src: submissionArr[i][5],
-            imgur: submissionArr[i][6],
-            thumb: submissionArr[i][7],
+            image: image,
+            thumb: thumb,
             id: id
         }
 
@@ -86,7 +91,4 @@ function sortEntries(submissionArr){
 
         idMap.set(submission.id, submission);
     }
-    console.log(categoriesMap);
-    console.log(userMap);
-    console.log(idMap);
 }

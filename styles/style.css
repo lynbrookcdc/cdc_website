@@ -1,3 +1,7 @@
+.arrow{
+    padding-bottom: 3px;
+}
+
 
 .modern-link{
     color: black;
@@ -5,7 +9,7 @@
     transition: color .2s;
 }
 .modern-link:hover{
-    color: #3d6fbf;
+    color: #3260a8;
 }
 
 .body-text{
@@ -19,6 +23,10 @@
     width: 100%;
 }
 
+.rounded-lg{
+    border-radius: 5%;
+}
+
 .section{
     margin-top: .5rem;
     margin-bottom: .5rem;
@@ -30,6 +38,15 @@
 .section-sml{
     margin-top: .5rem;
     margin-bottom: .5rem;
+}
+
+.margin-bot{
+    margin-bottom: 1rem;
+}
+
+.margin-x{
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .margin-x-sml{
@@ -53,6 +70,8 @@
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
+
+
 .button-circle{
     background-color: transparent;
     border-width: 0;
@@ -60,6 +79,7 @@
     height: 35px;
     width: 35px;
     transition: .3s;
+    margin-top: 3px;
 }
 
 .button-circle:hover{
@@ -98,6 +118,10 @@ h1, h2, h3, h4, h5, h6 {
 
 h4{
     font-weight: normal;
+}
+
+.font-bold{
+    font-weight: bold;
 }
 
 
@@ -179,6 +203,13 @@ h4{
     background-color: #e3e3e3;
 }
 
+.image {
+    max-height: 70vh;
+    max-width: 95%;
+    height: max-content;
+    width: auto
+}
+
 .thumbnail{
     background-color: #bbbbbb;
     height: 18vh;
@@ -247,6 +278,15 @@ https://stackoverflow.com/questions/17481660/darken-background-image-on-hover
 }
 
 
+@media only screen and (min-width: 576px) {
+    .button-circle{
+        margin-left: -27px;
+    }
+    .button-circle-image{
+        margin-left: -40px;
+    }
+}
+
 @media only screen and (min-width: 768px) {
     h1 {
 
@@ -285,6 +325,13 @@ https://stackoverflow.com/questions/17481660/darken-background-image-on-hover
 
 .no-margin{
     margin: 0;
+}
+.no-margin-x{
+    margin-right: 0;
+    margin-left: 0;
+}
+.no-margin-top{
+    margin-top: 0;
 }
 .no-margin-bot{
     margin-bottom: 0;

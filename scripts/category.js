@@ -8,12 +8,8 @@ tabTitle.innerText = category;
 galleryTitle.innerText = category;
 
 
-
-getData().then(loadImages)
-
-function loadImages() {
-    let categoryArr = categoriesMap.get(category);
-    inflateThumbnails(imageContainer, categoryArr, thumbnailTemplate, true);
+getData().then(() => {
+    inflateThumbnails(imageContainer, categoriesMap.get(category), thumbnailTemplate, true);
+})
 
 
-}

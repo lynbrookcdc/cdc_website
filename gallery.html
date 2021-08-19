@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="icon" href="images/cdcLogo.png">
-    <title>Lynbrook CDC</title>
+    <title>Gallery</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -23,7 +23,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-b">
     <div class="container-fluid" style="height: inherit">
-        <a class="navbar-brand" href="index.html"><h2 class="text-light nav-scale">cdc</h2></a>
+        <a class="navbar-brand" href="home.html"><h2 class="text-light nav-scale">cdc</h2></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -31,59 +31,43 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#galleries-section">gallery</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://linktr.ee/lynbrookcdc">contacts</a>
+                    <a class="nav-link active" aria-current="page" href="gallery.html">gallery</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="https://linktr.ee/lynbrookcdc">links</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contacts.html">contacts</a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
 
-<div class="bg-a">
-    <div class="container">
-        <div class="row d-flex justify-content-center">
-            <img class="logo" src="images/cdcLogo.png">
-            <div class="header d-inline-flex flex-column justify-content-center">
-                <h1 class="title text-light no-margin">Character Design Club</h1>
-                <h5 class="text-light no-margin vanish">@ LYNBROOK HIGH SCHOOL</h5>
-                <button type="button" class="btn btn-outline-light"><h3 class="center">Submit Art</h3></button>
-            </div>
-        </div>
+
+<div class="section-sml margin-x-sml align-items-center">
+    <div class="row center-x container no-padding">
+        <button class="button-circle no-padding button" onclick="history.go(-1)">
+            <svg class="arrow" height="24" width="24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="4 4.5 8 7">
+                <path fill-rule="evenodd"
+                      d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+            </svg>
+        </button>
+        <h1 id="galleryTitle" class="gallery-title no-margin wrap-content">
+            Gallery
+        </h1>
     </div>
 </div>
 
-<div class="section-lg margin-x-sml">
-    <div class="section">
-        <div class="col wrap-content center-x">
-            <h2>Announcements:</h2>
-            <p id="announcements" class="body-text section-sml tab wrap-content"> MERRY CHRISTMAS<br>
-                --------------------------------------------------<br>
-                Contest Due Dates:<br>
-                None, good luck on Opportunity Week!!<br>
-                Secret Santa Exchange pieces are due 1/4! Good luck and have fun :D<br>
-                <br>
-                More Information:<br>
-                - All social media: https://linktr.ee/lynbrookcdc<br>
-                - Submit to Sketches/Concept Art for 5 points per submission<br>
-                - Submit to Miscellaneous if you want to share art that does not apply to any current prompts!<br>
-            </p>
-        </div>
-    </div>
-
-
-    <div id="galleries-section" class="section-lg d-flex flex-column align-items-center">
+<div class="margin-x-sml">
+    <div id="galleries-section" class="d-flex flex-column align-items-center container-lg">
         <template id="carousel-template">
-            <div class="section container-lg d-flex flex-column">
+            <div class="margin-bot d-flex flex-column full-width">
                 <a href="#" class="d-flex flex-row align-items-end modern-link wrap-content">
-                        <h4 class="font-roboto">Gallery Title</h4>
-                        <h6 class="tab-mini">see all</h6>
+                    <h4>Gallery Title</h4>
+                    <h6 class="tab-mini">see all</h6>
                 </a>
-                <div id ="carousel-max">
+                <div id="carousel-max">
                     <div id="carousel" class="carousel row overflow-hidden">
 
                     </div>
@@ -96,7 +80,7 @@
                 <div class="thumbnail-highlight d-flex flex-column-reverse ">
                     <h6 class="thumbnail-text">THIS IS THE TITLE OF A LONG thing</h6>
                 </div>
-                <img class="thumbnail bg-c" src="images/cdcLogo.png">
+                <img class="thumbnail bg-c" src="" loading="lazy">
             </a>
         </template>
     </div>
@@ -107,8 +91,14 @@
 <script src="scripts/secrets.js"></script>
 <script src="https://apis.google.com/js/api.js"></script>
 <script src="scripts/request.js"></script>
-<script src="scripts/inflator.js"></script>
+
+
+<script src="scripts/linkify.min.js"></script>
+<script src="scripts/linkify-string.min.js"></script>
+
+
 <script src="scripts/main.js"></script>
+<script src="scripts/gallery.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
