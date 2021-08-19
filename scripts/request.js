@@ -13,7 +13,7 @@ function getData() {
     return new Promise((resolve, reject) => {
         gapi.load('client', function () {
             gapi.client.init({
-                'apiKey': API_KEY,
+                'apiKey': secrets.API_KEY,
                 // Your API key will be automatically added to the Discovery Document URLs.
                 'discoveryDocs': ['https://sheets.googleapis.com/$discovery/rest?version=v4'],
             }).then(getAnnouncementsSubmissions)
