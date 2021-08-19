@@ -66,17 +66,15 @@ function sortEntries(submissionArr){
             id: id
         }
 
-
-
-
-
         if (categoriesMap.has(submission.category)){
             let arr  = categoriesMap.get(submission.category)
             arr.push(submission)
             categoriesMap.set(submission.category, arr);
         }
+
         else{
             categoriesMap.set(submission.category, [submission]);
+
         }
 
         if(userMap.has(submission.username)) {
